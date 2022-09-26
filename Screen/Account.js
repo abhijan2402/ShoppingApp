@@ -28,9 +28,9 @@ function Account() {
                             <View style={styles.MyProfileText}>
                                 <Text style={styles.MyProfileTextInner}>MyProfile</Text>
                             </View>
-                            <View style={styles.DetailSection}>
-                                <View style={styles.innerDetailSection}><Text style={styles.innerDetailSectionText}>Name:ABhi</Text></View>
-                                <View style={styles.innerDetailSection}><Text style={[styles.innerDetailSectionText, { marginLeft: -20 }]}>Account Details</Text></View>
+                            <View style={styles.DetailSection1}>
+                                <View style={styles.innerDetailSection1}><Text style={styles.innerDetailSectionText}>Name:ABhi</Text></View>
+                                <View style={[styles.innerDetailSection2]}><Text style={[styles.innerDetailSectionText, { justifyContent: "center", color: "white" }]}>Account Details</Text></View>
                             </View>
                             <View style={styles.ContactView}>
                                 <View style={styles.innerDetailSection}><Text style={styles.innerDetailSectionText}>Contact : 7976114625</Text></View>
@@ -156,13 +156,14 @@ const styles = StyleSheet.create({
     DetailSection: {
         display: 'flex',
         flexDirection: "row",
-        // justifyContent: "space-around"
     },
+
     innerDetailSection: {
         width: windowWidth / 1.8,
         marginLeft: 20,
         marginVertical: 10
     },
+
     innerDetailSectionText: {
         fontSize: 17,
         color: "black"
@@ -191,12 +192,33 @@ const styles = StyleSheet.create({
         fontSize: 16,
         alignSelf: "center",
         marginLeft: 15,
-        // color: "black"
-    }
 
-
+    },
 
     // for Shopkepper
+    DetailSection1: {
+        display: 'flex',
+        flexDirection: "row",
+
+    },
+    innerDetailSection1: {
+        width: windowWidth / 2.1,
+        marginVertical: 10,
+        justifyContent: "center",
+        alignSelf: "center",
+        paddingHorizontal: 20
+    },
+    innerDetailSection2: {
+        width: windowWidth / 2,
+        marginVertical: 10,
+        justifyContent: "center",
+        alignSelf: "center",
+        textAlign: "center",
+        padding: 3,
+        paddingHorizontal: 29,
+        backgroundColor: "#3063A0",
+        borderRadius: 10,
+    },
 
 
 });
