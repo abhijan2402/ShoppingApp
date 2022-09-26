@@ -1,24 +1,9 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './Screen/Home';
 import Account from './Screen/Account';
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Home!</Text>
-//     </View>
-//   );
-// }
-
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+import ChatRoom from './Screen/ChatRoom';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,9 +12,8 @@ export default function App() {
     <NavigationContainer >
       <Tab.Navigator  >
         <Tab.Screen name="Home" component={Home} options={{ headerShown: false, }} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
         <Tab.Screen name="Account" component={Account} options={{ headerShown: false, }} />
-
+        <Tab.Screen name="Chat" component={ChatRoom} options={{ headerShown: false, }} />
       </Tab.Navigator>
     </NavigationContainer>
   );
