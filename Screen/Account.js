@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-function Account() {
+function Account({ navigation }) {
     const [seller, setSeller] = useState(false)
     return (
         <>
@@ -39,7 +39,7 @@ function Account() {
                             <View style={styles.BlueLine}></View>
                         </View>
                         <View>
-                            <View style={styles.OrderDetailSectionBtn}>
+                            <View style={styles.OrderDetailSectionBtn} onPress={() => navigation.navigate('Details')}>
                                 <Image source={{ uri: "https://thumbs.dreamstime.com/b/grocery-order-bag-food-goods-online-shop-hands-holding-vector-illustration-doodles-thin-line-art-sketch-style-concept-181767788.jpg" }} style={styles.OrderImg} />
                                 <Text style={styles.OrderDetailSectionText} >OrderLists</Text>
                             </View>
@@ -88,7 +88,7 @@ function Account() {
                             <View style={styles.BlueLine}></View>
                         </View>
                         <View>
-                            <View style={styles.OrderDetailSectionBtn}>
+                            <View style={styles.OrderDetailSectionBtn} >
                                 <Image source={{ uri: "https://thumbs.dreamstime.com/b/grocery-order-bag-food-goods-online-shop-hands-holding-vector-illustration-doodles-thin-line-art-sketch-style-concept-181767788.jpg" }} style={styles.OrderImg} />
                                 <Text style={styles.OrderDetailSectionText} >Orders</Text>
                             </View>
