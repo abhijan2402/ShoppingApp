@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {View,Text,StyleSheet,Image,Dimensions, TouchableOpacity,TextInput,FlatList} from 'react-native';
+import {View,Text,StyleSheet,Image,Dimensions, TouchableOpacity,TextInput,FlatList,ScrollView} from 'react-native';
 import dummyChatData from '../ChatData';
 const logo1=require("../Assets/profile.png");
 const search=require("../Assets/more.png");
@@ -44,8 +44,16 @@ const ChatRoom=()=>{
                 </TouchableOpacity>
             </View>
             <FlatList
-                inverted
-                data={[...dummyChatData]}
+                ListHeaderComponent={
+                  <>
+                    <Text style={styles.warnContainer}>
+                      Message in this chat are private and protected by Viber end to end encryption. Learn more
+                    </Text>
+                  </>
+                }
+                inverted={false}
+                
+                data={dummyChatData}
                 renderItem={renderItem}
                 keyExtractor={item => item.id}
                 style={styles.messageList}
@@ -147,6 +155,16 @@ const styles=StyleSheet.create({
         alignItems:"center",
         justifyContent:"center",
         marginRight:10
-      }
+      },
+      warnContainer:{
+        color:"white",
+        width:'70%',
+        fontWeight:"bold",
+        borderRadius:10,
+        backgroundColor:"#3063A0",
+        padding:15,
+        alignSelf:"center",
+        margin:10
+    }
 })
 export default ChatRoom;
