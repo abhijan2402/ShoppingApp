@@ -13,10 +13,9 @@ export default function App() {
   return (
     <NavigationContainer >
       <Tab.Navigator
-       tabBarOptions={{
-        showLabel: false,
-      }}
       screenOptions={{
+        tabBarActiveTintColor: '#e91e63',
+        tabBarShowLabel:false,
         tabBarStyle: {
           position: 'absolute',
           backgroundColor: '#3063A0',
