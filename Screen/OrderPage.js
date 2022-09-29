@@ -16,10 +16,10 @@ function OrderPage() {
             <View style={styles.mainBoxDetails}>
                 <View style={styles.InnerMainBoxDetails}>
                     <Text style={styles.ItemSpecification}>{item.Specification}</Text>
-                    <Text style={styles.ItemSpecification}>{item.Size}</Text>
+                    <Text style={[styles.ItemSpecification, { marginLeft: 20, fontWeight: "600" }]}>{item.Size}</Text>
                 </View>
                 <View style={styles.InnerMainBoxDetails}>
-                    <Text style={[styles.ItemSpecification, { fontWeight: "800", fontSize: 18 }]}>Order By:{item.OrderBy}</Text>
+                    <Text style={[styles.ItemSpecification, { fontWeight: "700", fontSize: 16 }]}>Order By:{item.OrderBy}</Text>
                 </View>
                 <View style={styles.InnerMainBoxDetails}>
                     <Text style={[styles.ItemSpecification, { fontWeight: "600" }]}>Address : {item.Address}</Text>
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
         marginVertical: 14
     },
     mainBox: {
-        borderWidth: 1.5,
+        borderWidth: 1,
         marginHorizontal: 20,
         marginVertical: 10,
         borderRadius: 20,
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         shadowColor: "red",
         elevation: -10,
         borderColor: "darkgrey",
-        shadowOffset: { width: -2, height: -9 },
+        shadowOffset: { width: -9, height: -9 },
         shadowColor: '#171717',
         shadowOpacity: 0.2,
         shadowRadius: 3,
@@ -124,12 +124,13 @@ const styles = StyleSheet.create({
     },
     mainBoxDetails: {
         // borderWidth: 1,
-        width: windowWidth / 1.6
+        width: windowWidth / 1.6,
+        // justifyContent: "flex-start"
     },
     InnerMainBoxDetails: {
         display: "flex",
         flexDirection: 'row',
-        justifyContent: "space-evenly",
+        // justifyContent: "space-evenly",
         marginVertical: 6
     },
     ItemSpecification: {
