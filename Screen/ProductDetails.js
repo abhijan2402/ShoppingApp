@@ -8,18 +8,24 @@ import {
     TouchableOpacity,
     ScrollView
 } from 'react-native'
+import ImageSlider from 'react-native-image-slider';
+import { Dropdown } from 'react-native-element-dropdown';
 const back=require('../Assets/arrow.png');
 const cart=require('../Assets/cart.png');
 const next=require('../Assets/next.png');
-
 const windowWidth=Dimensions.get('window').width;
-import { Dropdown } from 'react-native-element-dropdown';
 const ProductDetails=()=>{
     const data = [
         { label: 'Item 1', value: '1' },
         { label: 'Item 2', value: '2' },
         { label: 'Item 3', value: '3' },
       ];
+    const images = [
+        'https://placeimg.com/640/640/nature',
+        'https://placeimg.com/640/640/people',
+        'https://placeimg.com/640/640/animals',
+        'https://placeimg.com/640/640/beer',
+    ];
     
     return(
         <View style={{flex:1,alignItems:"center"}}>
@@ -34,9 +40,15 @@ const ProductDetails=()=>{
                 />
             </View>
             <ScrollView>
-                <Image
-                    source={{uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXtHjT64W2j7IKvMI2qo5OPq4Hkq7N9b8zKA&usqp=CAU"}}
-                    style={{width:windowWidth-20,height:200,alignSelf:"center",margin:10,borderRadius:10}}
+                <ImageSlider
+                    loopBothSides
+                    autoPlayWithInterval={3000}
+                    images={images}
+                    customSlide={({ index, item, style, width }) => (
+                        <View key={index} style={style.ImageSlider}>
+                            <Image source={{ uri: item }} style={{width:windowWidth-20,height:200,alignSelf:"center"}} />
+                        </View>
+                    )}
                 />
                 <Text style={{
                     color:"black",
@@ -114,14 +126,20 @@ const ProductDetails=()=>{
                         />
                     </View>
                 </View>
-                {/* <View style={{padding:20,marginTop:20,borderBottomWidth:1,borderColoR:"black"}}>
+                <View style={{padding:20,marginTop:20,borderBottomWidth:1,borderColoR:"black"}}>
                     <Text style={styles.detailText}>
                        Product reviews
                     </Text>
-                    <Text style={styles.detailText}>
-                        Cash on Delivery
-                    </Text>
-                </View> */}
+                    <View style={{marginLeft:20}}>
+                        <Text style={styles.detailText}>
+                            Terrific
+                        </Text>
+                        <Text style={styles.subdetailText}>
+                            Footwear refers to garments worn on the feet, which typically serves the 
+                            purpose of protection against adversities of the environment such as wear from ...
+                        </Text>
+                    </View>
+                </View>
             </ScrollView>
             <View style={styles.container}>
                 <TouchableOpacity style={styles.buttonContainer}>
@@ -195,6 +213,18 @@ const styles=StyleSheet.create({
         color:"black",
         fontSize:20,
         margin:10
+    },
+    subdetailText:{
+        fontSize:15,
+        color:"black",
+        margin:10
+    },
+    ImageSlider:{
+        width:windowWidth-20,
+        height:200,
+        alignSelf:"center",
+        margin:10,
+        borderRadius:10
     }
 })
 export default ProductDetails;
