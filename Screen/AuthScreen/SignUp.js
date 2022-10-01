@@ -36,14 +36,14 @@ const SignUp=()=>{
                     </View>
                 </View>
             </View>
-            <View style={styles.buttonTextContainer}>
+            <TouchableOpacity style={styles.buttonTextContainer}>
                 <Text style={{
                     color:"white",fontWeight:"bold",fontSize:18
                 }}>Already Have an Account ?</Text>
                 <TouchableOpacity style={styles.customButtom}>
                     <Text style={{color:"#3063A0",fontWeight:"bold",fontSize:15}}>Login</Text>
                 </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
         </View>
     )
 }
