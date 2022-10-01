@@ -8,6 +8,7 @@ import ChatRoom from './Screen/ChatRoom';
 import OrderPage from './Screen/OrderPage';
 import ProductDetails from './Screen/ProductDetails';
 import OrderPageDetail from './Screen/OrderPageDetail';
+import LogIn from './Screen/AuthScreen/LogIn';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
