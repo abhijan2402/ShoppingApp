@@ -11,17 +11,13 @@ function LogIn() {
                 <Text style={styles.LogInBoxText}>Buy & sell new products</Text>
                 <View style={styles.InputBox}>
                     <View style={styles.Input}>
-
                         <TextInput
                             placeholder='Email'
-
                         />
                     </View>
                     <View style={styles.Input}>
-
                         <TextInput
                             placeholder='Password'
-
                         />
                     </View>
                 </View>
@@ -47,7 +43,6 @@ function LogIn() {
                         style={styles.Logos}
                         source={{ uri: "https://cdn-icons-png.flaticon.com/128/2504/2504839.png" }}
                     />
-
                 </View>
             </View>
             <View style={styles.bottom}>
@@ -69,12 +64,10 @@ const styles = StyleSheet.create({
     LogInBox: {
         backgroundColor: "#FFFFFF",
         height: windowHeight / 1.5,
-        // justifyContent: "center",
         borderRadius: 30,
         marginHorizontal: 20,
         alignContent: "center",
         textAlign: "center",
-        // alignSelf: "center"
     },
     LogInBoxText: {
         fontSize: 15,
@@ -83,16 +76,16 @@ const styles = StyleSheet.create({
     },
     InputBox: {
         marginTop: 30,
-        // borderWidth: 1
     },
     Input: {
-        borderWidth: 1,
+        borderWidth: 0.3,
         borderRadius: 30,
         marginHorizontal: 20,
         marginVertical: 10,
         height: 45,
         padding: 3,
-        paddingLeft: 15
+        paddingLeft: 15,
+        backgroundColor: "lightgrey"
     },
     BackImg: {
         width: 20,
@@ -100,12 +93,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignSelf: "center",
         marginHorizontal: 10,
-        // borderWidth: 1
     },
     LogBtn: {
         display: "flex",
         flexDirection: "row"
-
     },
     LogBtn1: {
         display: "flex",
@@ -117,7 +108,6 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         alignSelf: "center",
-
     },
     bottom: {
         borderWidth: 1,
