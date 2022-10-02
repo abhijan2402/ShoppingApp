@@ -44,12 +44,12 @@ export default function App() {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: focused ? '#ffffff' : '#748c94',
+                  tintColor: focused ? '#ffffff' : 'black',
                 }}
               />
               <Text
                 style={{
-                  color: focused ? '#ffffff' : '#748c94',
+                  color: focused ? '#ffffff' : 'black',
                   fontSize: 12,
                 }}>
                 Home
@@ -72,12 +72,12 @@ export default function App() {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: focused ? '#ffffff' : '#748c94',
+                  tintColor: focused ? '#ffffff' : 'black',
                 }}
               />
               <Text
                 style={{
-                  color: focused ? '#ffffff' : '#748c94',
+                  color: focused ? '#ffffff' : 'black',
                   fontSize: 12,
                 }}>
                 User
@@ -101,12 +101,12 @@ export default function App() {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: focused ? '#ffffff' : '#748c94',
+                  tintColor: focused ? '#ffffff' : 'black',
                 }}
               />
               <Text
                 style={{
-                  color: focused ? '#ffffff' : '#748c94',
+                  color: focused ? '#ffffff' : 'black',
                   fontSize: 12,
                 }}>
                 Chat
@@ -129,12 +129,12 @@ export default function App() {
                 style={{
                   width: 25,
                   height: 25,
-                  tintColor: focused ? '#ffffff' : '#748c94',
+                  tintColor: focused ? '#ffffff' : 'black',
                 }}
               />
               <Text
                 style={{
-                  color: focused ? '#ffffff' : '#748c94',
+                  color: focused ? '#ffffff' : 'black',
                   fontSize: 12,
                 }}>
                 Orders
