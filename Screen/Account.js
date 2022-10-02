@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native'
+import ModelAddress from './ModelAddress';
+import Model from './ModelAddress';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 function Account({ navigation }) {
@@ -100,9 +102,9 @@ function Account({ navigation }) {
                                 <Image source={{ uri: "https://cdn-icons-png.flaticon.com/128/1041/1041916.png" }} style={styles.OrderImg} />
                                 <Text style={styles.OrderDetailSectionText} >Orders</Text>
                             </View>
-                            <View style={styles.OrderDetailSectionBtn}>
+                            <View style={styles.OrderDetailSectionBtn} >
                                 <Image source={{ uri: "https://png.pngtree.com/element_our/20200702/ourlarge/pngtree-cartoon-creative-map-location-image_2286149.jpg" }} style={styles.OrderImg} />
-                                <Text style={styles.OrderDetailSectionText} >Address</Text>
+                                <Text style={styles.OrderDetailSectionText} ><ModelAddress /></Text>
                             </View>
                         </View>
                     </View>

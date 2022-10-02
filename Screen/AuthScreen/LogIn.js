@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image, TextInput } from 'react-native';
+import InputBox from '../../components/InputBox';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 function LogIn() {
@@ -10,16 +11,15 @@ function LogIn() {
                 <Text style={styles.LogInBoxText}>Welcome Back</Text>
                 <Text style={styles.LogInBoxText}>Buy & sell new products</Text>
                 <View style={styles.InputBox}>
-                    <View style={styles.Input}>
-                        <TextInput
-                            placeholder='Email'
-                        />
-                    </View>
-                    <View style={styles.Input}>
-                        <TextInput
-                            placeholder='Password'
-                        />
-                    </View>
+                    <InputBox
+                        type="Email"
+                        iconImageLink={require("../../Assets/mail.png")}
+                    />
+                    <InputBox
+                        type="Password"
+                        iconImageLink={require("../../Assets/lock.png")}
+                    />
+
                 </View>
                 <Text style={{ textAlign: "center", fontSize: 15, color: "black", marginVertical: 10 }}>Forgot password?</Text>
                 <TouchableOpacity style={[styles.Input, { borderWidth: 0, backgroundColor: "#3063A0", width: windowWidth / 2.8, justifyContent: "center", borderRadius: 13, padding: 0, marginTop: 30, alignSelf: "flex-end", display: "flex", flexDirection: "row" }]}>
@@ -33,15 +33,15 @@ function LogIn() {
                 <View style={styles.LogBtn1}>
                     <Image
                         style={styles.Logos}
-                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/281/281764.png" }}
+                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/2702/2702602.png" }}
                     />
                     <Image
                         style={styles.Logos}
-                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/733/733547.png" }}
+                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/2111/2111393.png" }}
                     />
                     <Image
                         style={styles.Logos}
-                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/2504/2504839.png" }}
+                        source={{ uri: "https://cdn-icons-png.flaticon.com/128/733/733579.png" }}
                     />
                 </View>
             </View>
@@ -59,18 +59,19 @@ const styles = StyleSheet.create({
         height: windowHeight,
         width: windowWidth,
         backgroundColor: "#3063A0",
-        justifyContent: "center"
+        // justifyContent: "center"
     },
     LogInBox: {
         backgroundColor: "#FFFFFF",
         height: windowHeight / 1.5,
         borderRadius: 30,
         marginHorizontal: 20,
-        alignContent: "center",
+        // alignContent: "center",
         textAlign: "center",
+        marginTop: 80
     },
     LogInBoxText: {
-        fontSize: 15,
+        fontSize: 18,
         color: "black",
         textAlign: 'center'
     },
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-evenly",
-        marginTop: 80
+        marginTop: 70
     },
     Logos: {
         width: 30,
