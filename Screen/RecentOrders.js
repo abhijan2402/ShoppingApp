@@ -11,7 +11,7 @@ const RecentOrders=()=>{
     const showPopUp=()=>{
         Animated.timing(position,{
             toValue:{x:0,y:0},
-            duration:2000,
+            duration:1500,
             useNativeDriver:true
         }).start();
     }
@@ -47,8 +47,6 @@ const RecentOrders=()=>{
 const styles=StyleSheet.create({
     container:{
         flex:1,
-        // alignItems: 'center',
-        // justifyContent: 'center',
     },
     iconImage:{
         width:40,
