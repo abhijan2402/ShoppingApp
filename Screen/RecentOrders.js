@@ -17,7 +17,7 @@ const RecentOrders=()=>{
     }
     return(
         <View style={styles.container}>
-            <View style={{width:'100%',padding:20}}>
+            <View style={{width:'100%',padding:10,borderBottomLeftRadius:20,borderBottomRightRadius:20,backgroundColor:"white"}}>
                 <Image
                     style={styles.iconImage}
                     source={require('../Assets/arrow.png')}
@@ -36,9 +36,9 @@ const RecentOrders=()=>{
             ]}>
                 <Text style={styles.modalText}>Recently Ordered Sellers</Text>
                 <ScrollView style={{padding:20}}>
-                    <Text style={{fontSize:30,padding:5,margin:10,color:"white",fontWeight:"bold"}}>1. Pizza hut</Text>
-                    <Text style={{fontSize:30,padding:5,margin:10,color:"white",fontWeight:"bold"}}>1. Crazy hut</Text>
-                    <Text style={{fontSize:30,padding:5,margin:10,color:"white",fontWeight:"bold"}}>1. Trends</Text>
+                    <Text style={{fontSize:30,padding:5,margin:10,color:"#3063A0",fontWeight:"bold"}}>1. Pizza hut</Text>
+                    <Text style={{fontSize:30,padding:5,margin:10,color:"#3063A0",fontWeight:"bold"}}>1. Crazy hut</Text>
+                    <Text style={{fontSize:30,padding:5,margin:10,color:"#3063A0",fontWeight:"bold"}}>1. Trends</Text>
                 </ScrollView>
             </Animated.View>
         </View>
@@ -47,21 +47,22 @@ const RecentOrders=()=>{
 const styles=StyleSheet.create({
     container:{
         flex:1,
+        backgroundColor:"#3063A0"
     },
     iconImage:{
         width:40,
         height:40
     },
     textStyle:{
-        color:"black",
+        color:"white",
         fontWeight:"bold",
         fontSize:40,
         padding:30
     },
     animtedView:{
-        backgroundColor:"#3063A0",
+        backgroundColor:"white",
         width:windowWidth,
-        height:2*(windowHeight/3.3),
+        height:2*(windowHeight/3),
         position:"absolute",
         bottom:0,
         borderTopRightRadius:40,
@@ -70,7 +71,7 @@ const styles=StyleSheet.create({
     },
     modalText:{
         fontWeight:"bold",
-        color:"white",
+        color:"#3063A0",
         fontSize:25,
         textAlign:"center"
     }

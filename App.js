@@ -9,6 +9,7 @@ import OrderPage from './Screen/OrderPage';
 import ProductDetails from './Screen/ProductDetails';
 import OrderPageDetail from './Screen/OrderPageDetail';
 import LogIn from './Screen/AuthScreen/LogIn';
+import RecentOrders from './Screen/RecentOrders';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -86,7 +87,7 @@ export default function App() {
           ),
         }}
         />
-        <Tab.Screen name="Chat" component={ChatRoom} options={{
+        <Tab.Screen name="RecentOrders" component={RecentOrders} options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View
