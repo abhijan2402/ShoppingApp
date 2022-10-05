@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions } from 'rea
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import InputBox from '../../components/InputBox';
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.itemContainer}>
@@ -24,23 +24,29 @@ const SignUp = () => {
                         iconImageLink={require("../../Assets/lock.png")}
                     />
                 </View>
-                <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", alignSelf: "flex-end", marginHorizontal: 10 }}>
+                <View 
+                    style={{ flexDirection: "row", alignItems: "center", justifyContent: "center", alignSelf: "flex-end", marginHorizontal: 10 }}
+                >
                     <Text style={{
                         color: "black", fontWeight: "bold", fontSize: 30, marginHorizontal: 20
                     }}>SignUp</Text>
-                    <View style={styles.icomView}>
+                    <TouchableOpacity style={styles.icomView}
+                        onPress={()=>navigation.navigate("CompleteProfile")}
+                    >
                         <Image
                             style={styles.iconImage}
                             source={require("../../Assets/right.png")}
                         />
-                    </View>
+                    </TouchableOpacity>
                 </View>
             </View>
             <TouchableOpacity style={styles.buttonTextContainer}>
                 <Text style={{
                     color: "white", fontWeight: "bold", fontSize: 18
                 }}>Already Have an Account ?</Text>
-                <TouchableOpacity style={styles.customButtom}>
+                <TouchableOpacity style={styles.customButtom}
+                     onPress={()=>navigation.navigate("Login")}
+                >
                     <Text style={{ color: "#3063A0", fontWeight: "bold", fontSize: 15 }}>Login</Text>
                 </TouchableOpacity>
             </TouchableOpacity>

@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image, TextInput 
 import InputBox from '../../components/InputBox';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-function LogIn() {
+function LogIn({navigation}) {
     return (
         <View style={styles.Header}>
             <View style={styles.LogInBox}>
@@ -47,7 +47,9 @@ function LogIn() {
             </View>
             <View style={styles.bottom}>
                 <Text style={styles.bottomText}>Don't have account ?</Text>
-                <TouchableOpacity style={styles.SignUpbtn}>
+                <TouchableOpacity style={styles.SignUpbtn} 
+                    onPress={()=>navigation.navigate("SignUp")}
+                >
                     <Text style={{ fontSize: 15, textAlign: "center", color: "#3063A0" }}>SignUp</Text>
                 </TouchableOpacity>
             </View>
