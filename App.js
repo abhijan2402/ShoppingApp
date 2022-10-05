@@ -10,6 +10,7 @@ import ProductDetails from './Screen/ProductDetails';
 import OrderPageDetail from './Screen/OrderPageDetail';
 import LogIn from './Screen/AuthScreen/LogIn';
 import RecentOrders from './Screen/RecentOrders';
+import MainHomeScreen from './Screen/MainHomeScreen';
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
             height: 70,
           },
         }}>
-        <Tab.Screen name="Home" component={Home} options={{
+        <Tab.Screen name="MainHomeScreen" component={MainHomeScreen} options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View
@@ -58,7 +59,7 @@ export default function App() {
             </View>
           ),
         }} />
-        <Tab.Screen name="Account" component={Account} options={{
+        <Tab.Screen name="Account" component={ProductDetails} options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
             <View
