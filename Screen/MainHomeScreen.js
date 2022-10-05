@@ -32,8 +32,35 @@ function MainHomeScreen() {
                             </View>
                         )}
                     />
+                    <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", borderWidth: 6, borderTopWidth: 1, borderLeftWidth: 1, borderRightWidth: 1, paddingVertical: 10, marginHorizontal: 20, borderRadius: 20, marginVertical: 10, borderColor: "#3063A0" }}>
+
+                        <TouchableOpacity>
+                            <Image
+                                style={{ width: 50, height: 50, borderRadius: 20 }}
+                                source={{ uri: "https://cdn-icons-png.flaticon.com/512/3649/3649435.png" }}
+                            />
+                            <Text style={[styles.specialProduct, { fontSize: 15, fontWeight: "600" }]}>Cart</Text>
+
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image
+                                style={{ width: 50, height: 50, borderRadius: 20 }}
+                                source={{ uri: "https://cdn-icons-png.flaticon.com/128/1865/1865269.png" }}
+                            />
+                            <Text style={[styles.specialProduct, { fontSize: 15, fontWeight: "600" }]}>Address</Text>
+
+                        </TouchableOpacity>
+                        <TouchableOpacity>
+                            <Image
+                                style={{ width: 50, height: 50, borderRadius: 20 }}
+                                source={{ uri: "https://cdn-icons-png.flaticon.com/512/1653/1653630.png" }}
+                            />
+                            <Text style={[styles.specialProduct, { fontSize: 15, fontWeight: "600" }]}>Chat</Text>
+
+                        </TouchableOpacity>
+                    </View>
                     <View style={{ marginTop: 10, backgroundColor: "white" }}>
-                        <Text style={{ fontSize: 22, color: "black", textAlign: "left", fontWeight: "700", marginHorizontal: 20 }}>Special Products</Text>
+                        <Text style={{ fontSize: 22, color: "#3063A0", textAlign: "left", fontWeight: "700", paddingLeft: 20, borderWidth: 2, borderColor: "#3063A0", width: windowWidth / 1.7, borderBottomRightRadius: 20, borderTopRightRadius: 20, borderLeftWidth: 0, paddingVertical: 4 }}>Special Products</Text>
                         <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginVertical: 20 }}>
                             <TouchableOpacity>
                                 <Image
@@ -53,7 +80,7 @@ function MainHomeScreen() {
                         </View>
                     </View>
                     <View>
-                        <Text style={{ fontSize: 23, color: "black", textAlign: "right", fontWeight: "700", marginHorizontal: 30 }}>Latest brands</Text>
+                        <Text style={{ fontSize: 22, backgroundColor: "#3063A0", color: "white", textAlign: "right", fontWeight: "700", paddingRight: 25, borderWidth: 2, borderColor: "#3063A0", width: windowWidth / 1.8, alignSelf: "flex-end", borderTopLeftRadius: 20, borderBottomLeftRadius: 20, paddingVertical: 4 }}>Latest Brands</Text>
                         <TouchableOpacity style={{ marginHorizontal: 20, marginTop: 20 }}>
                             <Image
                                 style={{ width: 310, height: 150, borderRadius: 20 }}
@@ -68,7 +95,7 @@ function MainHomeScreen() {
                         </TouchableOpacity>
                     </View>
                     <View style={{ marginTop: 30 }}>
-                        <Text style={{ fontSize: 23, color: "black", textAlign: "left", fontWeight: "700", marginHorizontal: 30 }}>Offers</Text>
+                        <Text style={{ fontSize: 22, color: "#3063A0", textAlign: "left", fontWeight: "700", paddingLeft: 35, borderWidth: 2, borderColor: "#3063A0", width: windowWidth / 2.4, borderBottomRightRadius: 20, borderTopRightRadius: 20, borderLeftWidth: 0, paddingVertical: 4 }}>Offers</Text>
                         <TouchableOpacity style={{ marginHorizontal: 20, marginTop: 20 }}>
                             <Image
                                 style={{ width: 310, height: 150, borderRadius: 20 }}
@@ -94,7 +121,7 @@ const styles = StyleSheet.create({
     },
     HeaderInner: {
         backgroundColor: "#3063A0",
-        height: windowHeight / 11,
+        height: windowHeight / 13,
         borderBottomLeftRadius: 70,
         borderBottomRightRadius: 70,
         justifyContent: "center"
