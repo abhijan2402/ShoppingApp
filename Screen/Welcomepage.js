@@ -5,7 +5,7 @@ import { shouldUseActivityState } from 'react-native-screens';
 const windowWidth=Dimensions.get('window').width;
 const windowHeight=Dimensions.get('window').height;
 const handlePress = () => false;
-const welcomepage = () => {
+const Welcomepage = () => {
   
   return (
     <View style={styles.fullback}>
@@ -28,7 +28,7 @@ const welcomepage = () => {
   );
 }
 
-export default welcomepage
+export default Welcomepage
 
 const styles = StyleSheet.create({
            fullback:{

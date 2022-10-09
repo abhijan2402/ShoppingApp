@@ -9,7 +9,7 @@ const images = [
     'https://img.freepik.com/free-vector/sales-promotion-cartoon-web-icon-marketing-strategy-rebate-advertising-discount-offer-low-price-idea-clearance-sale-customer-attraction-vector-isolated-concept-metaphor-illustration_335657-2752.jpg?w=2000',
     'https://placeimg.com/640/640/beer',
 ];
-function MainHomeScreen() {
+function MainHomeScreen({navigation}) {
     return (
         <>
             <View style={{ backgroundColor: "white", height: windowHeight }}>
@@ -34,7 +34,9 @@ function MainHomeScreen() {
                     />
                     <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", borderWidth: 6, borderTopWidth: 1, borderLeftWidth: 1, borderRightWidth: 1, paddingVertical: 10, marginHorizontal: 20, borderRadius: 20, marginVertical: 10, borderColor: "#3063A0" }}>
 
-                        <TouchableOpacity>
+                        <TouchableOpacity 
+                            onPress={()=>navigation.navigate("Cart")}
+                        >
                             <Image
                                 style={{ width: 50, height: 50, borderRadius: 20 }}
                                 source={{ uri: "https://cdn-icons-png.flaticon.com/512/3649/3649435.png" }}
@@ -42,7 +44,10 @@ function MainHomeScreen() {
                             <Text style={[styles.specialProduct, { fontSize: 15, fontWeight: "600" }]}>Cart</Text>
 
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={()=>navigation.navigate("Address")}
+
+                        >
                             <Image
                                 style={{ width: 50, height: 50, borderRadius: 20 }}
                                 source={{ uri: "https://cdn-icons-png.flaticon.com/128/1865/1865269.png" }}
@@ -50,7 +55,9 @@ function MainHomeScreen() {
                             <Text style={[styles.specialProduct, { fontSize: 15, fontWeight: "600" }]}>Address</Text>
 
                         </TouchableOpacity>
-                        <TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={()=>navigation.navigate("ChatRoom")}
+                        >
                             <Image
                                 style={{ width: 50, height: 50, borderRadius: 20 }}
                                 source={{ uri: "https://cdn-icons-png.flaticon.com/512/1653/1653630.png" }}

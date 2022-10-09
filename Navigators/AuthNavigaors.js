@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LogIn from '../Screen/AuthScreen/LogIn';
 import SignUp from '../Screen/AuthScreen/SignUp'
 import Profile from '../Screen/AuthScreen/Profile';
+import Welcomepage from '../Screen/Welcomepage';
 const Stack = createNativeStackNavigator();
 
 function AuthNavigation() {
@@ -11,6 +11,7 @@ function AuthNavigation() {
       <Stack.Navigator screenOptions={{
         headerShown:false
       }}>
+        <Stack.Screen name="Welcomepage" component={Welcomepage} />
         <Stack.Screen name="Login" component={LogIn} />
         <Stack.Screen name="SignUp" component={SignUp} />
         <Stack.Screen name="CompleteProfile" component={Profile} />

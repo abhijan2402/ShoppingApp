@@ -3,8 +3,8 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import OrderPage from '../Screen/OrderPage';
-import ProductDetails from '../Screen/ProductDetails';
-import RecentOrders from '../Screen/RecentOrders';
+import Account from '../Screen/Account';
+import ModelAddress from '../Screen/ModelAddress';
 import MainHomeScreen from '../Screen/MainHomeScreen';
 const Tab = createBottomTabNavigator();
 
@@ -53,63 +53,6 @@ export default function TabNavigation() {
             </View>
           ),
         }} />
-        <Tab.Screen name="Account" component={ProductDetails} options={{
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                top: 4,
-              }}>
-              <Image
-                source={require('../Assets/account.png')}
-                resizeMode="contain"
-                style={{
-                  width: 25,
-                  height: 25,
-                  tintColor: focused ? '#ffffff' : 'black',
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? '#ffffff' : 'black',
-                  fontSize: 12,
-                }}>
-                User
-              </Text>
-            </View>
-          ),
-        }}
-        />
-        <Tab.Screen name="RecentOrders" component={RecentOrders} options={{
-          headerShown: false,
-          tabBarIcon: ({ focused }) => (
-            <View
-              style={{
-                alignItems: 'center',
-                justifyContent: 'center',
-                top: 4,
-              }}>
-              <Image
-                source={require('../Assets/recent.png')}
-                resizeMode="contain"
-                style={{
-                  width: 25,
-                  height: 25,
-                  tintColor: focused ? '#ffffff' : 'black',
-                }}
-              />
-              <Text
-                style={{
-                  color: focused ? '#ffffff' : 'black',
-                  fontSize: 12,
-                }}>
-                RecentOrders
-              </Text>
-            </View>
-          ),
-        }} />
         <Tab.Screen name="OrderPage" component={OrderPage} options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (
@@ -138,6 +81,63 @@ export default function TabNavigation() {
             </View>
           ),
         }} />
+        <Tab.Screen name="ModelAddress" component={ModelAddress} options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: 4,
+              }}>
+              <Image
+                source={require('../Assets/location.png')}
+                resizeMode="contain"
+                style={{
+                  width: 25,
+                  height: 25,
+                  tintColor: focused ? '#ffffff' : 'black',
+                }}
+              />
+              <Text
+                style={{
+                  color: focused ? '#ffffff' : 'black',
+                  fontSize: 12,
+                }}>
+                Address
+              </Text>
+            </View>
+          ),
+        }} />
+        <Tab.Screen name="Account" component={Account} options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <View
+              style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                top: 4,
+              }}>
+              <Image
+                source={require('../Assets/account.png')}
+                resizeMode="contain"
+                style={{
+                  width: 25,
+                  height: 25,
+                  tintColor: focused ? '#ffffff' : 'black',
+                }}
+              />
+              <Text
+                style={{
+                  color: focused ? '#ffffff' : 'black',
+                  fontSize: 12,
+                }}>
+                User
+              </Text>
+            </View>
+          ),
+        }}
+        />
       </Tab.Navigator>
   );
 }
