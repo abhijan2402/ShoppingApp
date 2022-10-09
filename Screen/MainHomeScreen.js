@@ -9,7 +9,7 @@ const images = [
     'https://img.freepik.com/free-vector/sales-promotion-cartoon-web-icon-marketing-strategy-rebate-advertising-discount-offer-low-price-idea-clearance-sale-customer-attraction-vector-isolated-concept-metaphor-illustration_335657-2752.jpg?w=2000',
     'https://placeimg.com/640/640/beer',
 ];
-function MainHomeScreen({navigation}) {
+function MainHomeScreen({ navigation }) {
     return (
         <>
             <View style={{ backgroundColor: "white", height: windowHeight }}>
@@ -21,21 +21,18 @@ function MainHomeScreen({navigation}) {
                 <ScrollView>
 
 
-                    <ImageSlider
-                        loopBothSides
-                        autoPlayWithInterval={3000}
-                        images={images}
-                        style={{ height: 200, borderRadius: 100, marginHorizontal: 5, borderRadius: 20, marginVertical: 10 }}
-                        customSlide={({ index, item, style, width }) => (
-                            <View key={index} style={[styles.ImageSlider, {}]}>
-                                <Image source={{ uri: item }} style={{ width: windowWidth - 10, height: 200, alignSelf: "center", }} />
-                            </View>
-                        )}
-                    />
+                    <TouchableOpacity >
+                        <Image
+                            style={{ width: windowWidth, height: 170, borderRadius: 20 }}
+
+                            source={{ uri: "https://previews.123rf.com/images/vectorhot/vectorhot1612/vectorhot161200015/67708097-store-icon-shop-icon-cartoon-vector-illustration-isolated-on-white-background-.jpg" }}
+                        />
+
+                    </TouchableOpacity>
                     <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", borderWidth: 6, borderTopWidth: 1, borderLeftWidth: 1, borderRightWidth: 1, paddingVertical: 10, marginHorizontal: 20, borderRadius: 20, marginVertical: 10, borderColor: "#3063A0" }}>
 
-                        <TouchableOpacity 
-                            onPress={()=>navigation.navigate("Cart")}
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate("Cart")}
                         >
                             <Image
                                 style={{ width: 50, height: 50, borderRadius: 20 }}
@@ -45,7 +42,7 @@ function MainHomeScreen({navigation}) {
 
                         </TouchableOpacity>
                         <TouchableOpacity
-                            onPress={()=>navigation.navigate("Address")}
+                            onPress={() => navigation.navigate("Address")}
 
                         >
                             <Image
@@ -56,7 +53,8 @@ function MainHomeScreen({navigation}) {
 
                         </TouchableOpacity>
                         <TouchableOpacity
-                            onPress={()=>navigation.navigate("ChatRoom")}
+                            onPress={() => navigation.navigate("ChatRoom")}
+
                         >
                             <Image
                                 style={{ width: 50, height: 50, borderRadius: 20 }}
@@ -69,7 +67,7 @@ function MainHomeScreen({navigation}) {
                     <View style={{ marginTop: 10, backgroundColor: "white" }}>
                         <Text style={{ fontSize: 22, color: "#3063A0", textAlign: "left", fontWeight: "700", paddingLeft: 20, borderWidth: 2, borderColor: "#3063A0", width: windowWidth / 1.7, borderBottomRightRadius: 20, borderTopRightRadius: 20, borderLeftWidth: 0, paddingVertical: 4 }}>Special Products</Text>
                         <View style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginVertical: 20 }}>
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={() => { navigation.navigate('Home') }}>
                                 <Image
                                     style={{ width: 150, height: 150, borderRadius: 20 }}
                                     source={{ uri: "https://images.meesho.com/images/products/44009963/kxwus_512.jpg" }}

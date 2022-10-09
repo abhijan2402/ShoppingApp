@@ -5,9 +5,10 @@ const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const logo1 = require("../Assets/logo3.png");
 const search = require("../Assets/search.png");
-const Home = () => {
+const Home = ({ navigation }) => {
+
     const renderItem = ({ item }) => (
-        <View style={styles.itemCard}>
+        <TouchableOpacity style={styles.itemCard} onPress={() => navigation.navigate("ProductDetail")}>
             <Image
                 style={styles.itemImage}
                 source={{ uri: item.imageLink }}
@@ -33,7 +34,7 @@ const Home = () => {
                     <Text style={[styles.text, { color: 'white' }]}>All Orders</Text>
                 </TouchableOpacity>
             </View>
-        </View>
+        </TouchableOpacity>
     );
     return (
         <View style={styles.container}>

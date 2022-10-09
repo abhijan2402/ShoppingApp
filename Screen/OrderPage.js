@@ -3,16 +3,16 @@ import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, FlatList }
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import data from "../DummyOrderData";
-function OrderPage() {
+function OrderPage({ navigation }) {
     const renderItem = ({ item }) => (
         <View style={styles.mainBox}>
-            <View style={styles.mainInnerBox}>
+            <TouchableOpacity style={styles.mainInnerBox} onPress={() => { navigation.navigate('OrderPagedetail') }}>
                 <Image
                     style={styles.itemImage}
                     source={{ uri: item.imageLink }}
                 />
                 <Text style={styles.PriceText}>MRP-{item.Price}</Text>
-            </View>
+            </TouchableOpacity>
             <View style={styles.mainBoxDetails}>
                 <View style={styles.InnerMainBoxDetails}>
                     <Text style={styles.ItemSpecification}>{item.Specification}</Text>
