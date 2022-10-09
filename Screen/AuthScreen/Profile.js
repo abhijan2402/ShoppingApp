@@ -48,12 +48,10 @@ const styles = StyleSheet.create({
     LogInBox: {
         backgroundColor: "#FFFFFF",
         height: windowHeight / 1.7,
-        // justifyContent: "center",
         borderRadius: 30,
         marginHorizontal: 20,
         alignContent: "center",
         textAlign: "center",
-        // alignSelf: "center"
     },
     ProfileText: {
         fontSize: 27,
