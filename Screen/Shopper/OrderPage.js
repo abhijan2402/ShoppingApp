@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions, FlatList } from 'react-native'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-import data from "../DummyOrderData";
+import data from "../../DummyOrderData";
 function OrderPage({ navigation }) {
     const renderItem = ({ item }) => (
         <View style={styles.mainBox}>

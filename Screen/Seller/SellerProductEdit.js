@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, Text, StyleSheet, FlatList, Dimensions, Image, TouchableOpacity } from 'react-native'
-import data from '../DummyData'
+import data from '../../DummyData'
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const logo1 = require("../Assets/logo3.png");
-const search = require("../Assets/search.png");
-const Home = ({ navigation }) => {
+const logo1 = require("../../Assets/logo3.png");
+const search = require("../../Assets/search.png");
+const SellerProductEdit = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
         <TouchableOpacity style={styles.itemCard} onPress={() => navigation.navigate("ProductDetail")}>
@@ -127,5 +127,5 @@ const styles = StyleSheet.create({
         // borderRadius:20
     }
 })
-export default Home
+export default SellerProductEdit
 

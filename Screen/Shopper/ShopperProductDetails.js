@@ -10,11 +10,11 @@ import {
 } from 'react-native'
 import ImageSlider from 'react-native-image-slider';
 import { Dropdown } from 'react-native-element-dropdown';
-const back = require('../Assets/arrow.png');
-const cart = require('../Assets/cart.png');
-const next = require('../Assets/next.png');
+const back = require('../../Assets/arrow.png');
+const cart = require('../../Assets/cart.png');
+const next = require('../../Assets/next.png');
 const windowWidth = Dimensions.get('window').width;
-const ProductDetails = ({ navigation }) => {
+const ShopperProductDetails = ({ navigation }) => {
     const data = [
         { label: 'Item 1', value: '1' },
         { label: 'Item 2', value: '2' },
@@ -227,6 +227,6 @@ const styles = StyleSheet.create({
         borderRadius: 10
     }
 })
-export default ProductDetails;
+export default ShopperProductDetails;
 
 

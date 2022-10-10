@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet, Dimensions, TouchableOpacity, Image } from 'react-native';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-function OrderPageDetail() {
+function ShopperOrderPageDetail() {
     return (
         <View style={styles.AccountScreen}>
             <View style={styles.OrderHeader}>
@@ -146,4 +146,4 @@ const styles = StyleSheet.create({
         marginHorizontal: 30
     }
 })
-export default OrderPageDetail;
+export default ShopperOrderPageDetail;

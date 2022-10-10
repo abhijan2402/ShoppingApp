@@ -43,6 +43,7 @@ function MainHomeScreen({ navigation }) {
                         </TouchableOpacity>
                         <TouchableOpacity
                             onPress={() => navigation.navigate("Address")}
+                        // onPress={() => navigation.navigate("ProductDetails")}
 
                         >
                             <Image
@@ -92,7 +93,7 @@ function MainHomeScreen({ navigation }) {
                                 source={{ uri: "https://hips.hearstapps.com/hmg-prod/images/best-running-shoes-lead-1576249557.jpg" }}
                             />
                         </TouchableOpacity>
-                        <TouchableOpacity style={{ marginHorizontal: 20, marginTop: 20 }}>
+                        <TouchableOpacity style={{ marginHorizontal: 20, marginTop: 20 }} >
                             <Image
                                 style={{ width: 310, height: 150, borderRadius: 20 }}
                                 source={{ uri: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/17305046/2022/2/26/d3e17ae1-f482-42d1-bc3b-a46afb1a25c01645858426508KillerMenNavyBlueSlip-OnSneakers1.jpg" }}

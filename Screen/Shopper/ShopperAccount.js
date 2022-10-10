@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { View, Text, TouchableOpacity, Image, StyleSheet, Dimensions } from 'react-native'
-import ModelAddress from './ModelAddress';
-import Model from './ModelAddress';
+import ModelAddress from '../ModelAddress';
+import Model from '../ModelAddress';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-function Account({ navigation }) {
+function ShopperAccount({ navigation }) {
     const [seller, setSeller] = useState(false)
     return (
         <>
@@ -58,7 +58,8 @@ function Account({ navigation }) {
                                 <Text style={styles.OrderDetailSectionText} >Shop location</Text>
                             </View>
                         </View>
-                    </View> :
+                    </View>
+                    :
                     <View style={styles.AccountScreen}>
                         <View>
                             <TouchableOpacity style={styles.TOBackImg} onPress={() => { setSeller(true) }}>
@@ -224,4 +225,4 @@ const styles = StyleSheet.create({
 
 
 });
-export default Account
+export default ShopperAccount
