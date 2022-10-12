@@ -5,7 +5,7 @@ import { shouldUseActivityState } from 'react-native-screens';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 const handlePress = () => false;
-const Welcomepage = () => {
+const Welcomepage = ({navigation}) => {
 
   return (
     <View style={styles.fullback}>
@@ -16,10 +16,10 @@ const Welcomepage = () => {
       <Text style={styles.header}>Welcome To The Postdab</Text>
       <Text style={styles.quote}>Explore New Things With Us</Text>
       <View style={{ flexDirection: "row", justifyContent: "center", marginTop: 30 }}>
-        <TouchableOpacity style={styles.btnContainer1}>
+        <TouchableOpacity style={styles.btnContainer1} onPress={()=>navigation.navigate("Login")}>
           <Text style={[styles.text1, { color: 'white' },]}>Customer</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.btnContainer2}>
+        <TouchableOpacity style={styles.btnContainer2} onPress={()=>navigation.navigate("Login")}>
           <Text style={[styles.text2, { color: 'black' }]}>Seller</Text>
         </TouchableOpacity>
       </View>

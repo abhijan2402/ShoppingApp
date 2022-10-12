@@ -26,7 +26,11 @@ const SignUp = ({ navigation }) => {
                 </View>
                 <TouchableOpacity style={[styles.Input, { borderWidth: 0, backgroundColor: "#3063A0", width: windowWidth / 2.8, justifyContent: "center", borderRadius: 13, padding: 0, marginTop: 30, alignSelf: "flex-end", display: "flex", flexDirection: "row" }]}>
 
-                    <Text style={{ color: "white", textAlign: "center", fontSize: 20, margin: 0, padding: 0, alignSelf: "center" }}>SignUp</Text>
+                    <Text style={{ color: "white", textAlign: "center", fontSize: 20, margin: 0, padding: 0, alignSelf: "center" }}
+                        onPress={() => navigation.navigate("CompleteProfile")}
+                    >
+                        SignUp
+                    </Text>
                     <Image
                         style={[styles.BackImg, { height: 30, width: 30 }]}
                         source={{ uri: "https://www.freeiconspng.com/thumbs/white-arrow-png/white-arrow-transparent-png-10.png" }}
@@ -35,7 +39,7 @@ const SignUp = ({ navigation }) => {
             </View>
             <TouchableOpacity style={styles.buttonTextContainer}>
                 <Text style={{
-                    color: "white", fontWeight: "bold", fontSize: 18
+                    color: "white", fontWeight: "bold", fontSize: 15
                 }}>Already Have an Account ?</Text>
                 <TouchableOpacity style={styles.customButtom}
                     onPress={() => navigation.navigate("Login")}
@@ -52,7 +56,8 @@ const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "space-between",
         backgroundColor: "#3063A0",
-        padding: 10
+        padding: 10,
+        paddingVertical:30
     },
     buttonTextContainer: {
         backgroundColor: "#3063A0",
@@ -76,7 +81,7 @@ const styles = StyleSheet.create({
     itemContainer: {
         backgroundColor: "white",
         width: windowWidth - 40,
-        height: 2 * (windowHeight / 2.5),
+        height: 2 * (windowHeight / 2.7),
         borderRadius: 40,
         alignItems: 'center',
         justifyContent: 'space-evenly',

@@ -5,7 +5,7 @@ import AuthNavigation from './Navigators/AuthNavigaors';
 import TabNavigation from './Navigators/TabNavigator';
 import MainNavigation from './Navigators/MainNavigation';
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(true)
   return (
     <NavigationContainer >
       {

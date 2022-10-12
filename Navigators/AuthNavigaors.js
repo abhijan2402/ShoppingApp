@@ -15,7 +15,6 @@ function AuthNavigation() {
       <Stack.Screen name="Login" component={LogIn} />
       <Stack.Screen name="SignUp" component={SignUp} />
       <Stack.Screen name="CompleteProfile" component={Profile} />
-      <Stack.Screen name="Welcomepage" component={Welcomepage} />
     </Stack.Navigator>
   );
 }
