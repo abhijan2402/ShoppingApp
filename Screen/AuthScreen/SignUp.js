@@ -1,9 +1,28 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions } from 'react-native'
+import auth from '@react-native-firebase/auth';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 import InputBox from '../../components/InputBox';
 const SignUp = ({ navigation }) => {
+    function signIN(){
+        auth()
+        .createUserWithEmailAndPassword('takc@example.com', 'nin51981!')
+        .then(() => {
+            console.log('User account created & signed in!');
+        })
+        .catch(error => {
+            if (error.code === 'auth/email-already-in-use') {
+            console.log('That email address is already in use!');
+            }
+
+            if (error.code === 'auth/invalid-email') {
+            console.log('That email address is invalid!');
+            }
+
+            console.error(error);
+        });
+    }
     return (
         <View style={styles.container}>
             <View style={styles.itemContainer}>
@@ -27,7 +46,7 @@ const SignUp = ({ navigation }) => {
                 <TouchableOpacity style={[styles.Input, { borderWidth: 0, backgroundColor: "#3063A0", width: windowWidth / 2.8, justifyContent: "center", borderRadius: 13, padding: 0, marginTop: 30, alignSelf: "flex-end", display: "flex", flexDirection: "row" }]}>
 
                     <Text style={{ color: "white", textAlign: "center", fontSize: 20, margin: 0, padding: 0, alignSelf: "center" }}
-                        onPress={() => navigation.navigate("CompleteProfile")}
+                        onPress={() => signIN()}
                     >
                         SignUp
                     </Text>
